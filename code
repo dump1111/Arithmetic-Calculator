@@ -1,0 +1,38 @@
+try:
+    operation = int(input("""Select Operator (Enter number only).
+1. Addition
+2. Subtraction
+3. Multiplication
+4. Division
+> """))
+
+    if operation == 1:
+        addend0 = float(input("Enter the first addend: "))
+        addend1 = float(input("Enter the second addend: "))
+        sum = addend0 + addend1
+
+        print(f"\n{addend0} + {addend1} = {sum}")
+    elif operation == 2:
+        minuend = float(input("Enter the minuend: "))
+        subtrahend = float(input("Enter the subtrahend: "))
+        difference = minuend - subtrahend
+
+        print(f"\n{minuend} - {subtrahend} = {difference}")
+    elif operation == 3:
+        multiplicand = float(input("Enter the multiplicand: "))
+        multiplier = float(input("Enter the multiplier: "))
+        product = multiplicand * multiplier
+
+        print(f"\n{multiplicand} * {multiplier} = {product}")
+    elif operation == 4:
+        dividend = float(input("Enter the dividend: "))
+        divisor = float(input("Enter the divisor: "))
+        quotient = dividend // divisor
+        remainder = dividend % divisor
+
+        print(f"\n{dividend} / {divisor} = {quotient}r.{remainder}")
+        print(f"\n{dividend} / {divisor} = {dividend/divisor}")
+    else:
+        print("\n1-4 is only the valid input")
+except ValueError:
+    print("ValueError - Input integer only")
